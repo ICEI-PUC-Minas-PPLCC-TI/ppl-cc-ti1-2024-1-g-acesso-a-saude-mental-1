@@ -24,11 +24,17 @@ Detalhes sobre o espaço de problema, justificativas e os objetivos do projeto.
 
 ### Problema
 
+Atualmente com a pressão da sociedade, as pessoas vem recorrendo mais e mais a profissionais da saúde mental,
+Pensando nisso, encontramos alguns empecilhos ao procurá-los como:
+- encontrar o profissional
+- encontrar um profissional em um preço acessível
+- encontrar um profissional em uma localidade agradável
+- encontrar um profissional mais adequado para o problema
+- Dificuldade de profissionais recém formados em encontrar clientela
 
 ### Objetivos
 
-
-### Justificativa
+Agir como um intermetiador por meio de um um site que estabeleca uma conexão entre psicólogos e pacientes.
 
 # **Concepção (Design Thinking)**
 
@@ -37,10 +43,6 @@ Detalhes do processo de discovery do projeto.
 ## **Processo de Design Thinking**
 
 O arquivo que se segue apresenta o resultado desse processo.
-
-# **Especificações do Projeto**
-
-Documentação das especificações do projeto.
 
 # **Público Alvo**
 
@@ -79,6 +81,10 @@ Com base na análise das personas foram identificadas as seguintes histórias de
 **Quero** : Uma maneira de conseguir ter acesso a uma demanda maior de pacientes
 
 **Para** : Conseguir me inserir no mercado de trabalho
+
+# **Especificações do Projeto**
+
+Documentação das especificações do projeto.
 
 ## **Requisitos**
 As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto.
@@ -208,6 +214,45 @@ PlaceHolder
 ### **Wireframes**
 
 Protótipo de telas do sistema em baixa fidelidade (rascunhos)
+
+Place holder
+
+# **Gestão de Projetos**
+
+Gerenciamento ---> Indica quem será responsável pelas decisões finais:
+
+### **Srum Master**
++ [Mateus Fasciani](https://github.com/MateusViggiani)
+
+### **Product Owner**
+
++ [Felipe Portes](https://github.com/Lipefsk)
+
+
+### **Desenvolvimento do HTMl**:
++ [Felipe Portes](https://github.com/Lipefsk)
++ [Gabriel Fernandes](https://github.com/gabrielfersouza)
+
+### **Desenvolvimento de CSS/Design**
++ [Felipe Portes](https://github.com/Lipefsk)
+
+### **Desenvolvimento de lógica dentro do site e JavaScript**
++ [Mateus Fasciani](https://github.com/MateusViggiani)
++ [João oliveira](https://github.com/olveirancc)
+
+### **Pesquisa relacionada a psicologia e saúde mental**
++ [João oliveira](https://github.com/olveirancc)
+
+
+###  **Ferramentas utilizadas**
+
++ IDE - [VScode](https://code.visualstudio.com/)
++ Ferramenta para o desenvolvimento de wireframe e userflow  - [Figma](https://www.figma.com)
++ Ferramenta para Design thinking - [Miro](https://miro.com/pt/)
+
+
+
+
 
 
 
