@@ -1,18 +1,21 @@
-# Nome do projeto
+# Acesso a saúde Mental
 
-Escreva um ou dois parágrafo resumindo o objetivo do seu projeto.
+  Atualmente, a maioria das pessoas enfrenta dificuldades para encontrar um psicólogo que atenda às suas necessidades. Na maioria dos casos, elas recorrem a indicações ou às redes sociais para encontrar um profissional adequado. Nosso projeto tem como objetivo desenvolver um site que possibilite a conexão entre psicólogos e potenciais pacientes, assim como o Preply estabeleceu conexões entre professores de idiomas e potenciais alunos.
 
 ## Alunos integrantes da equipe
-
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
++ [Rafael Tofallini](https://github.com/RToffu)
++ [Mateus Fasciani](https://github.com/MateusViggiani)
++ [João oliveira](https://github.com/olveirancc)
++ [Felipe Portes](https://github.com/Lipefsk)
++ [Gabriel Furst](https://github.com/GabrielFurst)
++ [Davi Wenzel](https://github.com/DaviOnGit)
++ [Gabriel Fernandes](https://github.com/gabrielfersouza)
 
 ## Professores responsáveis
 
-* Nome completo do professor 1
-* Nome completo do professor 2
+* Hayala Nepomuceno Curto
+* Carolina Stephanie Jerônimo de Almeida
+* Cristiano Neves Rodrigues
 
 ## Instruções de utilização
 
