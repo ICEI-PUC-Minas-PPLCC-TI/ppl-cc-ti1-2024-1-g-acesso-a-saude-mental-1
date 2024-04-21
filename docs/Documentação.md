@@ -64,9 +64,62 @@ O arquivo que se segue apresenta o resultado desse processo.
 
 # **Personas**
 
-placeholder
+### **Persona 1**:
 
-## **Histórias de Usuários**
+**Nome**: Pedro
+
+**Idade**: 18
+
+**Hobby**: Jogar
+
+**Trabalho**: Estudante
+
+**Personalidade**: Introvertido e estressado com a faculdade, problemas de interação social e gerenciamento de tempo.
+
+**Sonhos**: Conseguir prosperar na carreira e criar vínculos sociais
+
+**Objetos e lugares**: Telefone e computador, sendo o computador utilizado em casa e o celular onde ele estiver.
+
+**Objetivos Chave**:Encontrar um profissional que que consiga atender suas necessidades sem uma busca intensiva, a fim de melhorar sua relação com suas inseguranças e melhorar sua auto-estima.
+
+### **Persona 2**:
+
+**Nome**: Ana Paula
+
+**Idade**: 18
+
+**Hobby**: Ler
+
+**Trabalho**: Estudante
+
+**Personalidade**: Dificuldades com o gerenciamento de tempo, o que afeta em grande medida sua vida
+
+**Sonhos**: Melhorar sua organização
+
+**Objetos e lugares**: Telefone e computador, sendo o computador utilizado em casa e o celular onde ele estiver.
+
+**Objetivos Chave**:Encontrar um profissional que que consiga melhorar sua saúde mental e, por conseguinte, seu gerenciamento de tempo. Sem um busca massante
+
+### **Persona 3**:
+
+**Nome**: Luciana
+
+**Idade**: 23
+
+**Hobby**: Ler
+
+**Trabalho**: Psicóloga
+
+**Personalidade**: Calma e atenciosa Metódica
+
+**Sonhos**: Quer melhor entrar no mercado de trabalho
+
+**Objetos e lugares**: Telefone e computador, sendo o computador utilizado em casa e o celular onde ele estiver.
+
+**Objetivos Chave**:Ela procura facilitar o encontro de clientes divulgando seu trabalho por meio do app.
+
+
+# **Histórias de Usuários**
 
 Com base na análise das personas foram identificadas as seguintes histórias de usuários:
 
