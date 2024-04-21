@@ -261,14 +261,14 @@ Artefatos relacionados com a interface e a interacão do usuário na proposta de
 Artefatos relacionados com a interface e a interacão do usuário na solução proposta.
 
 
-PlaceHolder
+[User/Scree flow](docs/wireframe-and-userflow/userFlow.pdf)
 
 
 ### **Wireframes**
 
 Protótipo de telas do sistema em baixa fidelidade (rascunhos)
 
-Place holder
+[Wireframe](docs/wireframe-and-userflow/Wireframe.pdf)
 
 # **Gestão de Projetos**
 
