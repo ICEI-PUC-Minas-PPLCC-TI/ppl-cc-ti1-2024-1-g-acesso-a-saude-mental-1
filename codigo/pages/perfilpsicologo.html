@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Usuário</title>
+    <link rel="stylesheet" href="ppsicologostyle.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <a href="#" class="nav-logo">Sitezeras</a>
+        </nav>
+     <!--   <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#profile">Perfil</a></li>
+                <li><a href="#settings">Configurações</a></li>
+            </ul>
+        </nav> -->
+    </header>
+    <main>
+        <div class="profile-container">
+            <h2>Perfil do Usuário</h2>
+            <div class="profile-field">
+                <input type="file" id="foto" name="foto" style="display: none;">
+                <img id="profile-pic" src="default-profile.jpg" alt="Foto de perfil">
+                <span class="edit-pic" id="edit-pic" onclick="editField('foto')">Trocar Foto</span>
+            </div>
+            <div class="profile-field">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" value="João da Silva" disabled>
+                <span class="edit-icon" onclick="editField('nome')">✏️</span>
+            </div>
+            <div class="profile-field">
+                <label for="biografia">Biografia:</label>
+                <textarea id="biografia" name="biografia" disabled>Desenvolvedor de software com 10 anos de experiência.</textarea>
+                <span class="edit-icon" onclick="editField('biografia')">✏️</span>
+            </div>
+            <div class="profile-field">
+                <label for="especialidades">Especialidades:</label>
+                <input type="text" id="especialidades" name="especialidades" value="JavaScript, Node.js, React" disabled>
+                <span class="edit-icon" onclick="editField('especialidades')">✏️</span>
+            </div>
+            <div class="profile-field">
+                <label for="localizacao">Localização:</label>
+                <input type="text" id="localizacao" name="localizacao" value="São Paulo, Brasil" disabled>
+                <span class="edit-icon" onclick="editField('localizacao')">✏️</span>
+            </div>
+            <button id="save-button">Salvar</button>
+        </div>
+    </main>
+    <script src="ppisicologo.js"></script>
+</body>
+</html>
