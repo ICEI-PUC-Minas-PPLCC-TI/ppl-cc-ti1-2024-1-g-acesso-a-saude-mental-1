@@ -4,14 +4,7 @@ body {
     padding: 0;
     background-color: #DFF1EB;
 }
-
-/* header {
-    background-color:#4FA088;
-    color: white;
-    padding: 30px 0;
-    text-align: left;
-    
-}*/
+/* fontes*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
 
 * {
@@ -21,7 +14,7 @@ body {
 }
 
 html {
-    font-size: 62.5%;
+    font-size: 80%;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -32,6 +25,7 @@ li {
 a {
     text-decoration: none;
 }
+/* header */
 .header{
     border-bottom: 1px solid #E2E8F0;
     background-color: #4FA088;
@@ -63,7 +57,7 @@ a {
 }
 
 .nav-item {
-    margin-left: 5rem;
+    margin-left: 2rem;
 }
 
 .nav-link{
@@ -79,8 +73,15 @@ a {
 .nav-logo {
     font-size: 2.1rem;
     font-weight: 500;
-    color: white;
+    color: #727272;
+    background-color: #D9D9D9;
+    padding: 5px;
+    border-radius: 10px;
 }
+.nav-logo:hover {
+    background-color: #3c7a68;
+}
+/* menu hamburguer */
 @media only screen and (max-width: 768px) {
     .nav-menu {
         position: fixed;
@@ -129,9 +130,6 @@ a {
 }
 
 
-
-
-
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -150,6 +148,7 @@ nav ul li a {
     text-decoration: none;
 }
 
+/* body */
 .profile-container {
     background-color: #fff;
     padding: 20px;
