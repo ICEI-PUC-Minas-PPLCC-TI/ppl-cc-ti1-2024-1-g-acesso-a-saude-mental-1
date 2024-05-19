@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil do Usuário</title>
+    <title>Perfil do Psicólogo</title>
     <link rel="stylesheet" href="../assets/css/ppsicologostyle.css">
 </head>
 <body>
-    <header class="header">
+    <header class="header"> <!-- Header da pagina com reponsividade menu hamburguer--> 
         <nav class="navbar">
             <ul class="nav-menu">
                 <li class="nav-item">
@@ -24,52 +24,51 @@
                 </li>
             </ul>
             
-            <div class="hamburger">
+            <div class="hamburger"> <!-- Menu hamburguer -->
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
-            <a href="#" class="nav-logo">Sitezeras</a>
+            <a href="#" class="nav-logo">👤 Perfil</a> <!-- Acesso ao perfil -->
         </nav>
-     <!--   <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#profile">Perfil</a></li>
-                <li><a href="#settings">Configurações</a></li>
-            </ul>
-        </nav> -->
-    </header>
+     
+    </header> <!-- END HEADER -->
     <main>
-        <div class="profile-container">
-            <h2>Perfil do Usuário</h2>
-            <div class="profile-field">
+        <div class="profile-container"> <!-- Conteudo da pagina, edicao do perfil-->
+            <!-- <h2>Perfil do Psicólogo</h2> -->
+            <div class="profile-field"> <!-- Foto do perfil-->
                 <input type="file" id="foto" name="foto" style="display: none;">
                 <img id="profile-pic" src="../assets/images/default-avatar.jpg" alt="Foto de perfil">
                 <span class="edit-pic" id="edit-pic" onclick="editField('foto')">Trocar Foto</span>
             </div>
-            <div class="profile-field">
+            <div class="profile-field"> <!-- Nome -->
                 <label for="nome">Nome:</label>
                 <input type="text" id="nome" name="nome" value="Nome" disabled>
                 <span class="edit-icon" onclick="editField('nome')">✏️</span>
             </div>
-            <div class="profile-field">
+            <div class="profile-field"><!-- Biografia -->
                 <label for="biografia">Biografia:</label>
                 <textarea id="biografia" name="biografia" disabled>Biografia</textarea>
                 <span class="edit-icon" onclick="editField('biografia')">✏️</span>
             </div>
-            <div class="profile-field">
+            <div class="profile-field"> <!-- Especialidades -->
                 <label for="especialidades">Especialidades:</label>
                 <input type="text" id="especialidades" name="especialidades" value="Especialidades" disabled>
                 <span class="edit-icon" onclick="editField('especialidades')">✏️</span>
             </div>
-            <div class="profile-field">
+            <div class="profile-field"> <!-- Localizacao-->
                 <label for="localizacao">Localização:</label>
                 <input type="text" id="localizacao" name="localizacao" value="Localização" disabled>
                 <span class="edit-icon" onclick="editField('localizacao')">✏️</span>
             </div>
+            <div class="profile-field"> <!-- Contatos -->
+                <label for="contatos">Contatos:</label>
+                <input type="text" id="contatos" name="contatos" value="Contatos" disabled>
+                <span class="edit-icon" onclick="editField('contatos')">✏️</span>
+            </div>
             <button id="save-button">Salvar</button>
         </div>
     </main>
-    <script src="../assets/js/ppisicologo.js"></script>
+    <script src="../assets/js/ppisicologo.js"></script> <!-- Script da pagina-->
 </body>
 </html>
