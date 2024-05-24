@@ -72,59 +72,84 @@ main {
     border-top: 10px solid #D9D9D9;
 }
 
-.mes {
-    background-color: #D9D9D9;
-    color: #727272;
-    width: 200px;
-    height: max-content;
-    margin: 70px auto;
-    text-align: center;
-    font-size: 40px;
-    border-radius: 25px;
-    
-}
 
 /* CALENDARIO */
 
-.calendario {
-    width: 800px;
+.calendar {
     margin: 0 auto;
+    width: 1000px;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
 }
 
-.calendario .dianome{
-    display: grid;
-    padding: 0;
-    gap: 20px;
-    grid-template-columns: repeat(7, 1fr);
-    padding: 0;
-}
-
-.calendario .dias {
-    margin-top: 50px;
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 20px;
-    padding: 0;
-}
-
-.calendario li{
-    list-style: none;
-    font-size: 40px;
+.mes{
+    display: flex;
+    font-size: 30px;
     color: #727272;
-    background-color: #D9D9D9;
-    border-radius: 10px;
+
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.calendar table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.calendar th, .calendar td {
+    width: 14.28%;
+    padding: 10px;
     text-align: center;
 }
 
-.calendario button{
+.days{
+    background-color: #D9D9D9;
+    width: max-content;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin: 0 auto;
+}
+
+
+.calendar button {
+    width: 100%;
+    padding: 10px;
+    background: none;
     border: none;
-    background-color: #DFF1EB;
+    cursor: pointer;
+    background-color: #D9D9D9;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    
+}
+.calendar .today button {
+    background-color: #87ceeb;
+}
+.calendar .selected {
+    background-color: #727272 !important;
+    color: white;
+}
+.form-container {
+    margin: 0 auto;
+    display: none;
+    width: 300px;
+    background-color: #D9D9D9;
+    padding: 20px;
+    border-radius: 8px;
 }
 
-.calendario button.selecionado li {
-    background-color: #F1CC6A;
+#monthYear{
+background-color: #D9D9D9;
+padding: 5px;
+border-radius: 10px;
 }
 
+#nextMonth, #prevMonth{
+    width: max-content;
+}
 /*rodapé*/
 
 .footer{
