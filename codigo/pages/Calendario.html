@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/calendario.css">
+</head>
+
+
+<body>
+  <header class="header"> <!-- Header da pagina com reponsividade menu hamburguer--> 
+    <nav class="navbar">
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="#" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Blog</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Contact</a>
+            </li>
+        </ul>
+        
+        <div class="hamburger"> <!-- Menu hamburguer -->
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <a href="#" class="nav-logo">👤 Perfil</a> <!-- Acesso ao perfil -->
+    </nav>
+ 
+</header> 
+  
+
+  
+  <main>
+    <h1 class="title">AGENDA DE CONSULTAS</h1>
+    <div class="calendar">
+      <div class="mes">
+        <button id="prevMonth">&lt;</button>
+        <h1 id="monthYear"></h1>
+        <button id="nextMonth">&gt;</button>
+      </div>
+      <table>
+        <thead>
+          <ul class="days">
+            <li>Sun</li>
+            <li>Mon</li>
+            <li>Tue</li>
+            <li>Wed</li>
+            <li>Thu</li>
+            <li>Fri</li>
+            <li>Sat</li>
+          </ul>
+        </thead>
+        <tbody id="calendarBody">
+        </tbody>
+      </table>
+    </div>
+    <div class="form-container" id="formContainer">
+      <form id="eventForm">
+        <h2>Adicionar Evento</h2>
+        <label for="eventTitle">Título:</label>
+        <input type="text" id="eventTitle" name="eventTitle" required>
+        <label for="eventDescription">Descrição:</label>
+        <textarea id="eventDescription" name="eventDescription" required></textarea>
+        <input type="hidden" id="eventDate" name="eventDate">
+        <button type="submit">Salvar</button>
+      </form>
+    </div>
+    <footer>
+      <h1 class="footer">asdasd</h1>
+    </footer>
+
+  </main>
+  <script src="../assets/js/Calendario.js"></script>
+</body>
+
+
+</html>

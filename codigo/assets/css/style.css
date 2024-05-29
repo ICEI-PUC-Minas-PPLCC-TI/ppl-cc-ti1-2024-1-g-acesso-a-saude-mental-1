@@ -1,0 +1,241 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #DFF1EB;
+}
+/* fontes*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 80%;
+    font-family: 'Roboto', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+/* header */
+.header{
+    border-bottom: 1px solid #E2E8F0;
+    background-color: #4FA088;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    margin-left: 2rem;
+}
+
+.nav-link{
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: white;
+}
+
+.nav-link:hover{
+    color: #3c7a68;
+}
+
+.nav-logo {
+    font-size: 2.1rem;
+    font-weight: 500;
+    color: #727272;
+    background-color: #D9D9D9;
+    padding: 5px;
+    border-radius: 10px;
+}
+.nav-logo:hover {
+    background-color: #3c7a68;
+}
+/* menu hamburguer */
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 4rem;
+        flex-direction: column;
+        z-index: 3;
+        background-color: #4FA088;
+        width: 100%;
+       
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    
+    }
+    .hamburger .bar {
+        background-color: white;
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+
+}
+
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+}
+
+nav ul li {
+    display: inline;
+   
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* body */
+.profile-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+   
+}
+
+.profile-field {
+    margin-bottom: 15px;
+    position: relative;
+    
+}
+
+.profile-field label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.profile-field input, .profile-field textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.profile-field img {
+    display: block;
+    margin-top: 10px;
+    max-width: 130px;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    border-radius: 10px;
+    
+}
+.profile-field .edit-pic {
+    display: block;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: lightgrey;
+    color: darkslategrey;
+    max-width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    margin-top: 10px;
+    
+}
+.profile-field .edit-pic:hover {
+    background-color: #3c7a68;
+}
+.edit-icon {
+    position: absolute;
+    right: 10px;
+    top: 30px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+button {
+    background-color: #4FA088;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #3c7a68;
+}
+
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .profile-container {
+        width: 95%;
+        padding: 10px;
+    }
+}
