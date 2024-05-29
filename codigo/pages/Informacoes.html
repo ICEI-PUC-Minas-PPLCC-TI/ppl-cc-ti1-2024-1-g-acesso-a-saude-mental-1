@@ -12,27 +12,38 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
   <script defer src="java.js"></script>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/Informacoes.css">
 </head>
 
 
 <body>
-  <header>
-    <div class="perfil">
-      <i class="ph ph-user-circle"></i>
-      <h5 class="perfName">PERFIL</h5>
-    </div>
-  </header>
-
-  <aside class="menu">
-    <ul class="lista-geral">
-      <li class="lista">1234</li>
-      <li class="lista">1234</li>
-      <li class="lista">1234</li>
-      <li class="lista">1234</li>
-      <li class="lista">1234</li>
-    </ul>
-  </aside>
+  <header class="header"> <!-- Header da pagina com reponsividade menu hamburguer--> 
+    <nav class="navbar">
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="#" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Blog</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Contact</a>
+            </li>
+        </ul>
+        
+        <div class="hamburger"> <!-- Menu hamburguer -->
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <a href="#" class="nav-logo">👤 Perfil</a> <!-- Acesso ao perfil -->
+    </nav>
+ 
+</header> 
   <main>
     <div class="all">
       <header class="mx-auto p-4 h1" id="header">
@@ -47,7 +58,7 @@
         <div class="container text-center">
           <div class="row align-items-center">
             <div class="col">
-              <img class="profilepicture" src="assets/images.png" alt="profileimage">
+              <img class="profilepicture" src="../assets/images/default-avatar.jpg" alt="profileimage">
             </div>
             <div class="col d-flex align-items-start text-start" id="textblack">
               <p>
@@ -79,6 +90,8 @@
     </div>
 
   </main>
+
+  <script src="../assets/js/java.js"></script>
 </body>
 
 
