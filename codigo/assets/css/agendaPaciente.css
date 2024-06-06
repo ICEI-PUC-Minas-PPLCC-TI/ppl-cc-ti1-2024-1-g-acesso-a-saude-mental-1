@@ -1,0 +1,189 @@
+
+
+
+/* CALENDARIO */
+
+.title{
+    margin: 40px auto;
+    background-color: #D9D9D9;
+    color: #727272;
+    border-radius: 10px;
+    width: 450px;
+    font-size: 25px;
+    text-align: center;
+}
+
+.calendar {
+    /* background-color: #D9D9D9   ; */
+    margin: 0 auto;
+    width: 1000px;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+
+
+
+.mes{
+    display: flex;
+    font-size: 30px;
+    color: #727272;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.calendar table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.calendar th, .calendar td {
+    width: 14.28%;
+    padding: 10px;
+    text-align: center;
+}
+
+.days{
+    list-style: none;
+    display: flex;
+    margin: 30px 0 30px;
+}
+
+.days p {
+    background-color: #D9D9D9;
+    color: #727272;
+    margin: 0   auto;
+    width: 50px;
+    height: 50px;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+.calendar button {
+    width: 100%;
+    padding: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    background-color: #D9D9D9;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin: 0 auto;
+    color: #727272;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out;
+}
+
+.calendar button:not(:disabled):hover {
+    width: 100%;
+    padding: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    background-color: #aaaaaa;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin: 0 auto;
+    color: #D9D9D9;
+}
+
+.calendar button:disabled {
+    cursor: default;
+    opacity: .35;
+}
+
+
+.calendar .selected {
+    background-color: #727272 !important;
+    color: white;
+}
+.form-container {
+    display: none;
+    margin: 0 auto;
+    width: 300px;
+}
+
+#monthYear{
+    background-color: #D9D9D9;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 25px;
+    margin: 0;
+    width: 250px;
+    text-align: center;
+}
+
+#nextMonth, #prevMonth{
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+#eventTitle{
+    background-color: #727272;
+    outline: none;
+    border-radius: 5px;
+    border: 0;
+    padding: 2px;
+    color: #D9D9D9;
+    margin: 0 auto;
+}
+
+#horarios{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    max-width: 600px;
+    margin: 0px auto;
+    gap: 10px;
+}
+
+#horarios p{
+    position: relative;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #D9D9D9;
+    margin: 0;
+    overflow: hidden;
+}
+
+#horarios p:before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #4FA088;
+}
+
+td.next-month, td.prev-month{
+    background-color: #D9D9D9;
+    width: 10px;
+    border-radius: 5px;
+}
+
+.horariosDisponiveis{
+    background-color: #d9d9d9;
+    color: #727272;
+    border-radius: 10px;
+    width: 350px;
+    font-size: 25px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+/*rodapé*/
+
+.footer{
+    margin-top: 2000px;
+    text-align: center;
+}
