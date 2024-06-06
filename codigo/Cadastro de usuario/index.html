@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Usuário</title>
-</head>
+    </head>
 <body>
     <div class="container">
         <h2>Cadastro de Usuário</h2>
-        <form action="cadastro.php" method="post">
+        <form id="cadastroForm">
             <div class="form-group">
                 <label for="nome">Nome:</label>
                 <input type="text" id="nome" name="nome" required>
@@ -36,5 +36,41 @@
             <button type="submit" class="btn">Cadastrar</button>
         </form>
     </div>
+
+    <script>
+        document.getElementById('cadastroForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+
+            const formData = {
+                nome: document.getElementById('nome').value,
+                email: document.getElementById('email').value,
+                senha: document.getElementById('senha').value,
+                cpf: document.getElementById('cpf').value,
+                endereco: document.getElementById('endereco').value,
+                complemento: document.getElementById('complemento').value
+            };
+
+      
+            fetch('cadastro.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Cadastro realizado com sucesso!');
+                } else {
+                    alert('Erro ao realizar cadastro: ' + data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Erro:', error);
+                alert('Erro ao realizar cadastro');
+            });
+        });
+    </script>
 </body>
 </html>
