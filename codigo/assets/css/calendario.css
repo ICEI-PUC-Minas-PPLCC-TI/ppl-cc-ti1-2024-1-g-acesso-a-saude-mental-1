@@ -4,10 +4,17 @@
 /* CALENDARIO */
 
 .title{
+    margin: 40px auto;
+    background-color: #D9D9D9;
+    color: #727272;
+    border-radius: 10px;
+    width: 450px;
+    font-size: 25px;
     text-align: center;
 }
 
 .calendar {
+    /* background-color: #D9D9D9   ; */
     margin: 0 auto;
     width: 1000px;
     padding: 20px;
@@ -22,7 +29,6 @@
     display: flex;
     font-size: 30px;
     color: #727272;
-
     padding: 10px;
     justify-content: space-between;
     align-items: center;
@@ -52,6 +58,9 @@
     height: 50px;
     padding: 15px;
     border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
 .calendar button {
@@ -66,9 +75,10 @@
     border-radius: 5px;
     margin: 0 auto;
     color: #727272;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out;
 }
 
-.calendar button:hover {
+.calendar button:not(:disabled):hover {
     width: 100%;
     padding: 10px;
     background: none;
@@ -80,8 +90,13 @@
     border-radius: 5px;
     margin: 0 auto;
     color: #D9D9D9;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out;
 }
+
+.calendar button:disabled {
+    cursor: default;
+    opacity: .35;
+}
+
 
 .calendar .selected {
     background-color: #727272 !important;
@@ -97,10 +112,17 @@
     background-color: #D9D9D9;
     padding: 5px;
     border-radius: 10px;
+    font-size: 25px;
+    margin: 0;
+    width: 250px;
+    text-align: center;
 }
 
 #nextMonth, #prevMonth{
     width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #eventForm{
@@ -156,6 +178,12 @@
     bottom: 0;
     left: 0;
     background-color: #4FA088;
+}
+
+td.next-month, td.prev-month{
+    background-color: #D9D9D9;
+    width: 10px;
+    border-radius: 5px;
 }
 
 /*rodapé*/

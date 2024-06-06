@@ -6,40 +6,55 @@ let mes;
 let appointments;
 
 async function loadAppointments() {
-    const response = await fetch("https://778b3d17-899f-478a-bc1a-fb48f02dff8b-00-10mayq3qxg10t.kirk.replit.dev/horarios")
-    const data = await response.json()
-    appointments = data
+    const response = await fetch("https://778b3d17-899f-478a-bc1a-fb48f02dff8b-00-10mayq3qxg10t.kirk.replit.dev/horarios");
+    const data = await response.json();
+    appointments = data;
 }
 
-const horarios = document.getElementById("horarios")
+const horarios = document.getElementById("horarios");
 
 function generateCalendar(month, year) {
     mes = month;
     const monthYearElement = document.getElementById('monthYear');
     monthYearElement.innerText = new Date(year, month).toLocaleString('default', { month: 'long', year: 'numeric' });
-    
+
     const calendarBody = document.getElementById('calendarBody');
     calendarBody.innerHTML = '';
-    
+
     const firstDay = new Date(year, month, 1).getDay();
     const daysInMonth = new Date(year, month + 1, 0).getDate();
-    
+    const daysInPrevMonth = new Date(year, month, 0).getDate();
+
     let date = 1;
+    let nextDate = 1;
+    let hasCurrentMonthDays = false;
+
     for (let i = 0; i < 6; i++) {
         const row = document.createElement('tr');
-        
+        hasCurrentMonthDays = false; // Reset for each row
+
         for (let j = 0; j < 7; j++) {
             const cell = document.createElement('td');
-            
+
             if (i === 0 && j < firstDay) {
-                cell.innerText = '';
+                const prevMonthDate = daysInPrevMonth - firstDay + j + 1;
+                const button = document.createElement('button');
+                button.innerText = prevMonthDate;
+                button.classList.add('prev-month');
+                button.disabled = true; // Optional: Disable buttons for previous month
+                cell.appendChild(button);
             } else if (date > daysInMonth) {
-                break;
+                const button = document.createElement('button');
+                button.innerText = nextDate;
+                button.classList.add('next-month');
+                button.disabled = true; // Optional: Disable buttons for next month
+                cell.appendChild(button);
+                nextDate++;
             } else {
                 const button = document.createElement('button');
                 button.innerText = date;
                 button.addEventListener('click', () => {
-                    horarios.innerHTML = ""
+                    horarios.innerHTML = "";
                     const selectedButton = document.querySelector('.selected');
                     if (selectedButton) {
                         selectedButton.classList.remove('selected');
@@ -48,25 +63,31 @@ function generateCalendar(month, year) {
                     const formContainer = document.getElementById('formContainer');
                     formContainer.style.display = 'block';
                     const hours = appointments.filter(hour => {
-                        return hour.data === +button.textContent && hour.mes === month + 1
-                    })
+                        return hour.data === +button.textContent && hour.mes === month + 1;
+                    });
                     console.log(hours);
                     hours.forEach(appointment => {
                         horarios.innerHTML += `
-                            <p>${appointment.hora}</p>
-                        `
-                    })
-                    day = +button.textContent
+                            <p>
+                                ${appointment.hora}
+                            </p>
+                        `;
+                    });
+                    day = +button.textContent;
                 });
                 if (date === today.getDate() && month === today.getMonth() && year === today.getFullYear()) {
                     button.classList.add('today');
                 }
                 cell.appendChild(button);
                 date++;
+                hasCurrentMonthDays = true; // Set to true when there's a day from the current month
             }
             row.appendChild(cell);
         }
-        calendarBody.appendChild(row);
+        // Only append the row if it contains at least one current month day
+        if (hasCurrentMonthDays) {
+            calendarBody.appendChild(row);
+        }
     }
 }
 
@@ -80,7 +101,7 @@ function nextMonth() {
 
 function prevMonth() {
     const formContainer = document.getElementById('formContainer');
-    formContainer.style.display = 'none';       
+    formContainer.style.display = 'none';
     currentYear = (currentMonth === 0) ? currentYear - 1 : currentYear;
     currentMonth = (currentMonth === 0) ? 11 : currentMonth - 1;
     generateCalendar(currentMonth, currentYear);
@@ -96,7 +117,7 @@ document.getElementById('eventForm').addEventListener('submit', function (event)
         data: +day,
         mes: mes + 1
     };
-    
+
     const requestOptions = {
         method: 'POST',
         headers: {
@@ -116,7 +137,7 @@ document.getElementById('eventForm').addEventListener('submit', function (event)
         .then(data => {
             horarios.innerHTML += `
                 <p>${document.getElementById('eventTitle').value}</p>
-            `
+            `;
         })
         .catch(error => {
             console.error('Erro:', error);
@@ -124,6 +145,6 @@ document.getElementById('eventForm').addEventListener('submit', function (event)
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-    loadAppointments()
+    loadAppointments();
     generateCalendar(currentMonth, currentYear);
 });
