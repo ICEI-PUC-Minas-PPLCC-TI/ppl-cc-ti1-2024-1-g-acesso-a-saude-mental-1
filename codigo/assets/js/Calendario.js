@@ -80,7 +80,7 @@ function nextMonth() {
 
 function prevMonth() {
     const formContainer = document.getElementById('formContainer');
-    formContainer.style.display = 'none';
+    formContainer.style.display = 'none';       
     currentYear = (currentMonth === 0) ? currentYear - 1 : currentYear;
     currentMonth = (currentMonth === 0) ? 11 : currentMonth - 1;
     generateCalendar(currentMonth, currentYear);
