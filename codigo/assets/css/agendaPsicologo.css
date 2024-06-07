@@ -14,21 +14,48 @@
 }
 
 .calendar {
-    /* background-color: #D9D9D9   ; */
+    background-color:#D9D9D9;
     margin: 0 auto;
     width: 1000px;
     padding: 20px;
     border-radius: 8px;
     margin-bottom: 20px;
+    /* animation: changeColor 5s linear infinite; */
 }
 
+/* @keyframes changeColor{
+    0%{background-color:hsl(0, 50%, 50%) ;}
+    25%{background-color:hsl(46, 50%, 50%) ;}
+    50%{background-color:hsl(84, 50%, 59%) ;}
+    75%{background-color: hsl(240, 50%, 50%);}
+    100%{background-color: hsl(0, 100%, 50%);}
+} */
 
+#nextMonth, #prevMonth{
+    background-color: #4FA088;
+    color: #D9D9D9;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .15s;
+}
 
+#nextMonth:hover, #prevMonth:hover{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+}
 
 .mes{
+    background-color: #4FA088;
     display: flex;
     font-size: 30px;
-    color: #727272;
+    color: #D9D9D9;
     padding: 10px;
     justify-content: space-between;
     align-items: center;
@@ -51,11 +78,12 @@
 }
 
 .days p {
+    font-size: 25px;
     background-color: #D9D9D9;
     color: #727272;
     margin: 0   auto;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     padding: 15px;
     border-radius: 5px;
     display: flex;
@@ -64,18 +92,22 @@
   }
   
 .calendar button {
+    font-size: 25px;
     width: 100%;
     padding: 10px;
     background: none;
     border: none;
     cursor: pointer;
     background-color: #D9D9D9;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: 5px;
     margin: 0 auto;
     color: #727272;
     transition: color .15s ease-in-out,background-color .15s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .calendar button:not(:disabled):hover {
@@ -85,8 +117,8 @@
     border: none;
     cursor: pointer;
     background-color: #aaaaaa;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: 5px;
     margin: 0 auto;
     color: #D9D9D9;
@@ -109,7 +141,6 @@
 }
 
 #monthYear{
-    background-color: #D9D9D9;
     padding: 5px;
     border-radius: 10px;
     font-size: 25px;
@@ -118,12 +149,7 @@
     text-align: center;
 }
 
-#nextMonth, #prevMonth{
-    width: max-content;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+
 
 #eventForm{
     background-color: #D9D9D9;
@@ -180,11 +206,11 @@
     background-color: #4FA088;
 }
 
-td.next-month, td.prev-month{
+/* td.next-month, td.prev-month{
     background-color: #D9D9D9;
     width: 10px;
     border-radius: 5px;
-}
+} */
 
 /*rodapé*/
 
