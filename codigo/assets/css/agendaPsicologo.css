@@ -13,12 +13,27 @@
     text-align: center;
 }
 
+.mes{
+    background-color: #4FA088;
+    display: flex;
+    font-size: 30px;
+    color: #D9D9D9;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    width: 1000px;
+    margin: 0 auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
 .calendar {
     background-color:#D9D9D9;
     margin: 0 auto;
     width: 1000px;
     padding: 20px;
-    border-radius: 8px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     margin-bottom: 20px;
     /* animation: changeColor 5s linear infinite; */
 }
@@ -51,16 +66,7 @@
     font-size: 40px;
 }
 
-.mes{
-    background-color: #4FA088;
-    display: flex;
-    font-size: 30px;
-    color: #D9D9D9;
-    padding: 10px;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
+
 .calendar table {
     width: 100%;
     border-collapse: collapse;
