@@ -6,9 +6,14 @@ let mes;
 let appointments;
 
 async function loadAppointments() {
-    const response = await fetch("https://778b3d17-899f-478a-bc1a-fb48f02dff8b-00-10mayq3qxg10t.kirk.replit.dev/horarios");
-    const data = await response.json();
-    appointments = data;
+    try {
+        const response = await fetch("https://778b3d17-899f-478a-bc1a-fb48f02dff8b-00-10mayq3qxg10t.kirk.replit.dev/horarios");
+        const data = await response.json();
+        appointments = data;
+        generateCalendar(currentMonth, currentYear); // Atualiza o calendário após carregar os compromissos
+    } catch (error) {
+        console.error('Erro ao carregar compromissos:', error);
+    }
 }
 
 const horarios = document.getElementById("horarios");
@@ -67,13 +72,33 @@ function generateCalendar(month, year) {
                     });
                     console.log(hours);
                     hours.forEach(appointment => {
-                        horarios.innerHTML += `
-                            <p>
-                                ${appointment.hora}
-                            </p>
+                        const appointmentElement = document.createElement("p");
+                        appointmentElement.innerHTML = `
+                            <i data-id="${appointment.id}" class="ph ph-trash deletar"></i>
+                            ${appointment.hora}
                         `;
+                        horarios.appendChild(appointmentElement);
                     });
                     day = +button.textContent;
+
+                    // Adiciona o evento de exclusão para cada botão de lixo
+                    horarios.querySelectorAll(".deletar").forEach(deleteButton => {
+                        deleteButton.addEventListener("click", function() {
+                            const id = this.getAttribute("data-id");
+                            fetch(`https://778b3d17-899f-478a-bc1a-fb48f02dff8b-00-10mayq3qxg10t.kirk.replit.dev/horarios/${id}`, {
+                                method: 'DELETE'
+                            })
+                            .then(response => {
+                                if (!response.ok) {
+                                    throw new Error('Erro ao excluir dados');
+                                }
+                                this.parentNode.remove();
+                            })
+                            .catch(error => {
+                                console.error('Erro:', error);
+                            });
+                        });
+                    });
                 });
                 if (date === today.getDate() && month === today.getMonth() && year === today.getFullYear()) {
                     button.classList.add('today');
@@ -132,12 +157,33 @@ document.getElementById('eventForm').addEventListener('submit', function (event)
             if (!response.ok) {
                 throw new Error('Erro ao enviar dados para o servidor');
             }
-            loadAppointments();
+            return response.json();
         })
         .then(data => {
-            horarios.innerHTML += `
-                <p>${document.getElementById('eventTitle').value}</p>
+            // Adiciona novo compromisso ao calendário
+            const appointmentElement = document.createElement("p");
+            appointmentElement.innerHTML = `
+                <i data-id="${data.id}" class="ph ph-trash deletar"></i>
+                ${document.getElementById('eventTitle').value}
             `;
+            horarios.appendChild(appointmentElement);
+
+            // Adiciona o evento de exclusão para o novo item
+            appointmentElement.querySelector(".deletar").addEventListener("click", function() {
+                const id = this.getAttribute("data-id");
+                fetch(`https://778b3d17-899f-478a-bc1a-fb48f02dff8b-00-10mayq3qxg10t.kirk.replit.dev/horarios/${id}`, {
+                    method: 'DELETE'
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Erro ao excluir dados');
+                    }
+                    this.parentNode.remove();
+                })
+                .catch(error => {
+                    console.error('Erro:', error);
+                });
+            });
         })
         .catch(error => {
             console.error('Erro:', error);
@@ -146,5 +192,4 @@ document.getElementById('eventForm').addEventListener('submit', function (event)
 
 document.addEventListener('DOMContentLoaded', () => {
     loadAppointments();
-    generateCalendar(currentMonth, currentYear);
 });
