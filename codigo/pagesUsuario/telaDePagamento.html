@@ -46,34 +46,10 @@
         </nav>
 
     </header>
-
-    <div class="pagamento">
-        <p>akdasjkd</p>
-        <div class="email">
-            <input type="text" name="email" id="email">
-        </div>
-        <div class="numero">
-            <input type="text" name="numero" id="numero">
-        </div>
-        <div class="validade">
-            <input type="text" name="validade" id="validade">
-        </div>
-        <div class="cvc">
-            <input type="text" name="cvc" id="cvc">
-        </div>
-        <div class="nome">
-            <input type="text" name="nome" id="nome">
-        </div>
-        <button class="concluir"><p>Concluir pagamento</p></button>
-
-    </div>
-</body>
-
-</html>
-
-<!-- <div class="quadrado">
+    <section class="Pagamento">
+        <div class="quadrado">
             <div class="descricao-pagamento">
-                <h3>Pagamento</h3>
+                <h3>Realize o pagamento</h3>
             </div>
             <div class="forma-pagamento">
                 <form method="POST" id="paymentForm">
@@ -85,7 +61,7 @@
                         <label>Dados do caratão:</label>
                         <input type="text" placeholder="1234-1234-1234-1234" />
                         <div class="form-50">
-                            <input type="text" placeholder="01/01" />
+                            <input type="text" placeholder="12/23" />
                             <input type="text" placeholder="CVC" />
                         </div>
                     </div>
@@ -97,4 +73,26 @@
                     </div>
                 </form>
             </div>
-        </div> -->
+        </div>
+    </section>
+    <script>
+        const form = document.getElementById('paymentForm');
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const formData = {
+                userEmail: form.querySelector('input[name="userEmail"]').value,
+                cardNumber: form.querySelector('input[name="cardNumber"]').value,
+                cardExpiry: form.querySelector('input[name="cardExpiry"]').value,
+                cardCvc: form.querySelector('input[name="cardCvc"]').value,
+                cardholderName: form.querySelector('input[name="cardholderName"]').value,
+                paymentAmount: form.querySelector('input[name="ação"]').value,
+            };
+
+            console.log(JSON.stringify(formData));
+        });
+    </script>
+</body>
+
+</html>

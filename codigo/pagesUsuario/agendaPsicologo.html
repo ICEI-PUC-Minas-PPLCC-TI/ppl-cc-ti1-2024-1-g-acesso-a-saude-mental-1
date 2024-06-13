@@ -11,9 +11,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
-  <script defer src="java.js"></script>
   <link rel="stylesheet" href="../assets/css/style.css">
-  <link rel="stylesheet" href="../assets/css/perfilUsuario.css">
+  <link rel="stylesheet" href="../assets/css/agendaPsicologo.css">
 </head>
 
 
@@ -44,54 +43,49 @@
     </nav>
 
   </header>
+
+
+
   <main>
-    <div class="all">
-      <header class="mx-auto p-4 h1" id="header">
-        <style>
-          p {
-            color: white;
-          }
-        </style>
-        <p>Informações do Usuário</p>
-      </header>
-      <div class="userbox">
-        <div class="container text-center">
-          <div class="row align-items-center">
-            <div class="col">
-              <img class="profilepicture" src="../assets/images/default-avatar.jpg" alt="profileimage">
-            </div>
-            <div class="col d-flex align-items-start text-start" id="textblack">
-              <p>
-                <span id="nome" class="textblack"></span> <br>
-                <span id="cpf" class="textblack"></span> <br>
-                <span id="endereco" class="textblack"></span> <br>
-                <span id="complemento" class="textblack"></span> <br>
-                <span id="email" class="textblack"></span>
-              </p>
-            </div>
+    <P class="title">Agenda de consultas</P>
+    <div class="mes">
+      <button id="prevMonth"><i class="ph ph-caret-left"></i></button>
+      <p id="monthYear"></p>
+      <button id="nextMonth"><i class="ph ph-caret-right"></i></button>
+    </div>
+    <div class="calendar">
+      <table>
+        <thead>
+          <div class="days">
+            <p>Dom</p>
+            <p>Seg</p>
+            <p>Ter</p>
+            <p>Qua</p>
+            <p>Qui</p>
+            <p>Sex</p>
+            <p>Sab</p>
           </div>
-        </div>
-      </div>
-      <div class="info">
-        <br>
-        <br>
-        <h2>Financeiro: </h2>
-        <p class="textblack">
-          <span id="metpag"></span> <br>
-          <span id="ultcobr"></span> <br>
-          <span id="datultcobr"></span> <br>
-        </p>
-        <br>
-        <h2>Últimas Seções: </h2>
-        <p class="textblack">
-          <span id="psicologo"></span>
-        </p>
+        </thead>
+        <tbody id="calendarBody">
+        </tbody>
+      </table>
+    </div>
+    <div class="form-container" id="formContainer">
+      <form id="eventForm">
+        <h2>Adicionar Horário</h2>
+        <input type="time" id="eventTitle" name="eventTitle" required>
+        <button type="submit">Adicionar</button>
+      </form>
+      <div id="horarios">
+
       </div>
     </div>
+    <footer>
+      <h1 class="footer">asdasd</h1>
+    </footer>
 
   </main>
-
-  <script src="../assets/js/java.js"></script>
+  <script src="../assets/js/agendaPsicologo.js"></script>
   <script src="../assets/js/menu.js"></script>
 </body>
 

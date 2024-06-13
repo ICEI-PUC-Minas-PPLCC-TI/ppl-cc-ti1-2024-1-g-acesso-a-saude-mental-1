@@ -83,20 +83,20 @@ function generateCalendar(month, year) {
 
                     // Adiciona o evento de exclusão para cada botão de lixo
                     horarios.querySelectorAll(".deletar").forEach(deleteButton => {
-                        deleteButton.addEventListener("click", function() {
+                        deleteButton.addEventListener("click", function () {
                             const id = this.getAttribute("data-id");
                             fetch(`https://778b3d17-899f-478a-bc1a-fb48f02dff8b-00-10mayq3qxg10t.kirk.replit.dev/horarios/${id}`, {
                                 method: 'DELETE'
                             })
-                            .then(response => {
-                                if (!response.ok) {
-                                    throw new Error('Erro ao excluir dados');
-                                }
-                                this.parentNode.remove();
-                            })
-                            .catch(error => {
-                                console.error('Erro:', error);
-                            });
+                                .then(response => {
+                                    if (!response.ok) {
+                                        throw new Error('Erro ao excluir dados');
+                                    }
+                                    this.parentNode.remove();
+                                })
+                                .catch(error => {
+                                    console.error('Erro:', error);
+                                });
                         });
                     });
                 });
@@ -169,20 +169,20 @@ document.getElementById('eventForm').addEventListener('submit', function (event)
             horarios.appendChild(appointmentElement);
 
             // Adiciona o evento de exclusão para o novo item
-            appointmentElement.querySelector(".deletar").addEventListener("click", function() {
+            appointmentElement.querySelector(".deletar").addEventListener("click", function () {
                 const id = this.getAttribute("data-id");
                 fetch(`https://778b3d17-899f-478a-bc1a-fb48f02dff8b-00-10mayq3qxg10t.kirk.replit.dev/horarios/${id}`, {
                     method: 'DELETE'
                 })
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Erro ao excluir dados');
-                    }
-                    this.parentNode.remove();
-                })
-                .catch(error => {
-                    console.error('Erro:', error);
-                });
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Erro ao excluir dados');
+                        }
+                        this.parentNode.remove();
+                    })
+                    .catch(error => {
+                        console.error('Erro:', error);
+                    });
             });
         })
         .catch(error => {
