@@ -1,18 +1,21 @@
- body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
         .container {
-            background-color: white;
+            background-color: #d9d9d9;
+            color: #727272;
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
             width: 300px;
+            margin: 50px auto;
         }
+
+        
+        #nome, #email, #senha, #cpf, #endereco, #complemento{
+            background-color: #727272;
+            border-radius: 5px;
+            outline: none;
+            border: 0;
+            color: #d9d9d9;
+        }
+
         .container h2 {
             margin-bottom: 20px;
         }
@@ -29,7 +32,7 @@
             box-sizing: border-box;
         }
         .btn {
-            background-color: #4CAF50;
+            background-color: #4FA088;
             color: white;
             padding: 10px;
             border: none;
