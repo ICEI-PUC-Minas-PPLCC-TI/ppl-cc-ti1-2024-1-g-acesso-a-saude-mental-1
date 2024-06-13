@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Tela de pagamento</title>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+  crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+
+
+<body>
+  <header>
+    <div class="perfil">
+      <i class="ph ph-user-circle"></i>
+      <h5 class="perfName">PERFIL</h5>
+    </div>
+  </header>
+
+  <aside class="menu">
+    <ul class="lista-geral">
+      <li class="lista">Perfil</li>
+      <li class="lista">Consulta</li>
+      <li class="lista">Calendario</li>
+      <li class="lista">Pagamentos</li>
+      <li class="lista">Suporte</li>
+    </ul>
+  </aside>
+  <main>
+    <section class="Pagamento">
+        <div class="quadrado">
+      <div class="descricao-pagamento">
+          <h3>Realize o pagamento</h3>
+      </div>
+      <div class="forma-pagamento"> 
+          <form method="POST"id="paymentForm">
+              <div class="form-100">
+                  <label>Email:</label>
+                  <input type="text"/>
+              </div>
+              <div class="form-100">
+                  <label>Dados do caratão:</label>
+                  <input type="text" placeholder="1234-1234-1234-1234" />
+                  <div class="form-50">
+                      <input type="text" placeholder="12/23"/>
+                      <input type="text" placeholder="CVC"/>
+                  </div>
+              </div>
+              <div class="form-100">
+                  <input type="text" placeholder="Nome no cartão"/>
+              </div>
+              <div class="form-100">
+                 <button type="submit" id="pagarButton">Concluir pagamento</button>
+             </div>
+          </form>
+      </div>
+    </div>
+  </section>
+  </main>
+  <script>
+    const form = document.getElementById('paymentForm');
+
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const formData = {
+            userEmail: form.querySelector('input[name="userEmail"]').value,
+            cardNumber: form.querySelector('input[name="cardNumber"]').value,
+            cardExpiry: form.querySelector('input[name="cardExpiry"]').value,
+            cardCvc: form.querySelector('input[name="cardCvc"]').value,
+            cardholderName: form.querySelector('input[name="cardholderName"]').value,
+            paymentAmount: form.querySelector('input[name="ação"]').value,
+        };
+
+        console.log(JSON.stringify(formData));
+    });
+</script>
+</body>
+</html>

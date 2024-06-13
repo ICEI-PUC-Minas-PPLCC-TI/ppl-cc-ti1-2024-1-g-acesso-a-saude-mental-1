@@ -1,0 +1,122 @@
+
+body {
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    font-size: 30px;
+    color: #727272;
+    background-color: #4FA088;
+    padding: 10px;
+    align-items: right;
+}
+
+.perfil {
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    margin-left: auto;
+}
+
+.perfil h5 {
+    margin: auto;
+}
+
+.perfName {
+    font-weight: normal;
+}
+
+.menu {
+    background-color: #4FA088;
+    height: 100%;
+    position: fixed;
+    padding: 70px 10px;
+    top: 0;
+}
+
+.lista-geral {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.lista {
+    background-color: #D9D9D9;
+    padding: 0 20px;
+    margin: 10px;
+    list-style: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+main {
+    background-color: #D9D9D9; 
+    padding: 20px;
+    border-radius: 10px;
+     width: calc(100% - 115px);
+    background-color: #F0F8F4; 
+    padding: 20px;
+    border-radius: 10px;
+    width: calc(100% - 115px);
+    height: 100vh;
+    margin-left: 115px;
+    border-left: 65px solid #D9D9D9;
+    border-top: 10px solid #D9D9D9; 
+}
+
+
+.descricao-pagamento h3 {
+    color: #4FA088; 
+    font-size: 24px; 
+    margin-bottom: 20px; 
+}
+
+.form-100 {
+    margin-left: auto; 
+    margin-right: auto; 
+    max-width: 500px; 
+}
+
+.form-50 {
+    display: flex;
+    margin-left: auto; 
+    margin-right: auto; 
+    max-width: 500px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+input[name="ação"] {
+    background-color: #4FA088;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+}
+
+input[name="ação"]:hover {
+    background-color: #388073;
+}
+
+.quadrado{
+    background-color: #D9D9D9; 
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 50PX;
+    border-bottom: 100px;
+}
+
+    
+
