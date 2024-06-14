@@ -1,0 +1,63 @@
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 50px;
+}
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    color: #747474;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.option-title{
+    margin-top: 80px;
+    font-size: 58px
+}
+
+
+.log-container{
+    display: flex;
+
+    gap:40px;
+}
+
+.option-log {
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    text-align: center; /* Centers text within the element */
+    
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height: 300px;
+    width: 300px;
+    border-radius: 30px;
+    
+    font-size: 45px;
+    background-color: rgba(153, 157, 161, 0.71);
+    transition: height 0.15s ease-in-out, width 0.15s ease-in-out, font-size 0.15s ease-in-out, background-color 0.15s ease-in-out;
+}
+
+.option-log:hover {
+    height: 350px;
+    width: 350px;
+    font-size: 55px;
+    background-color: rgb(132, 132, 132);
+}
+
+
+
+.option-end{
+    font-size: 30px;
+}
+
+.option-end a{
+    color: rgb(7, 170, 7);
+}
+
+.option-end a:visited{
+    color: green;
+}

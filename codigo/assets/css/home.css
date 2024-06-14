@@ -144,21 +144,12 @@ main{
   font-size: 24px;
 }
 
-.information:hover{
-  height: 400px;
-  width: 1300px;
-  background-color:  rgba(86, 189, 160, 0.8);
-  transition: background 0.15s ease-in-out;
-  transition: height 0.15s ease-in-out;
-  transition: width 0.15s ease-in-out;
-  
-}
+
 
 .information:hover {
   height: 400px;
   width: 1300px;
   background-color: rgba(86, 189, 160, 0.8);
-  transition: background 0.15s ease-in-out, height 0.15s ease-in-out, width 0.15s ease-in-out;
 }
 
 .information:hover p{
