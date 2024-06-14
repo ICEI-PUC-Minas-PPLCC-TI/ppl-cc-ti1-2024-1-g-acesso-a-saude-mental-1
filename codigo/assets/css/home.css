@@ -87,7 +87,7 @@
 }
 
 .home-title{
-
+    margin-top: 20px;
     font-size: 38px;
     text-align: center;
 
@@ -111,15 +111,64 @@ main{
 }
 
 .information{
-    background-color: #56bda0ce;
+    background-color: rgba(86, 189, 160, 0.584);
     border-radius: 10px;
     height: 300px;
     width: 1200px;
+    
 }
 
 .information img{
     margin: 20px;
+    margin-top: 10px;
     float: left;
     height: 200px;
     border-radius: 10px;
+}
+
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  color: #747474;
+  font-weight: 400;
+  font-style: normal;
+}
+.information h2{
+  font-size: 30px;
+  margin: 20px 20px 0px 20px;
+}
+
+.information p{
+  margin-top: 50px;
+  text-indent: 3%;
+  text-wrap: stable;
+  font-size: 24px;
+}
+
+.information:hover{
+  height: 400px;
+  width: 1300px;
+  background-color:  rgba(86, 189, 160, 0.8);
+  transition: background 0.15s ease-in-out;
+  transition: height 0.15s ease-in-out;
+  transition: width 0.15s ease-in-out;
+  
+}
+
+.information:hover {
+  height: 400px;
+  width: 1300px;
+  background-color: rgba(86, 189, 160, 0.8);
+  transition: background 0.15s ease-in-out, height 0.15s ease-in-out, width 0.15s ease-in-out;
+}
+
+.information:hover p{
+  font-size: 30px;
+}
+.information:hover h2{
+  font-size: 34px;
+}
+
+
+.no-image{
+ margin-left: 20px;
 }

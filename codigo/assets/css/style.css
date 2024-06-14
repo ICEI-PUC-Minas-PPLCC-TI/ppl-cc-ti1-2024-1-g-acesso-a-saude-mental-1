@@ -239,3 +239,12 @@ button:hover {
         padding: 10px;
     }
 }
+
+
+footer{
+
+    margin-top: 100px;
+    background-color: gray;
+    height: 100px;
+    width: 100%;
+}
