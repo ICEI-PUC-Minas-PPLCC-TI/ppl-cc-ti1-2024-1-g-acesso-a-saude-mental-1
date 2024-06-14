@@ -242,9 +242,15 @@ button:hover {
 
 
 footer{
-
+    display: flex;
     margin-top: 100px;
     background-color: gray;
     height: 100px;
     width: 100%;
+    align-content: center;
+   justify-content: center;
+}
+
+footer p{
+    margin-top: 30px;    
 }
