@@ -1,0 +1,37 @@
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.title-form{
+    font-size: 48px;
+}
+
+.opcao{
+
+    background-color: #6dd6b7;
+    border-radius: 10px;
+    display: flex;
+    margin-bottom: 20px;
+    flex-direction: column;
+    font-size: 20px;
+    height: 500px;
+    width: 1000px;
+}
+.title-option{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 35px !important;
+}
+
+.opcao ul{
+    margin-top: 60px;
+}
+
+.opcao ul li{
+    margin-bottom: 40px;
+    margin-left:40px ;
+}
