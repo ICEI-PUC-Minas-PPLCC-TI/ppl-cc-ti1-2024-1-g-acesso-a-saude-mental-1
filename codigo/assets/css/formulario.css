@@ -32,6 +32,9 @@ main{
 }
 
 .opcao ul li{
+
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin-bottom: 40px;
     margin-left:40px ;
 }
+

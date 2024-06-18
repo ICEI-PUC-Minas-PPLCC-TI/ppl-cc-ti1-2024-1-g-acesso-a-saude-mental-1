@@ -225,7 +225,6 @@ button {
     cursor: pointer;
     border-radius: 5px;
     display: block;
-    width: 100%;
 }
 
 button:hover {
@@ -258,3 +257,11 @@ footer{
 footer p{
     margin-top: 30px;    
 }
+
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    color: #747474;
+    font-weight: 400;
+    font-style: normal;
+  }
+  

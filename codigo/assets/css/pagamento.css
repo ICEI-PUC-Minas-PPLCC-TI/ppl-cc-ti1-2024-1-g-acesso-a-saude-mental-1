@@ -1,6 +1,7 @@
 .credit-title{
     text-align: center;
     font-size: 48px;
+    margin-bottom: 50px;
 
 
 
@@ -8,6 +9,7 @@
 
 .credit-title img{
     height: 65px;
+
     color: #747474;;
 }
 
@@ -20,5 +22,39 @@
 
 
 .credit-type img{
-    height: 40px;
+    height: 60px;
   }
+
+.validade p{
+    display: inline-block
+    
+}
+
+.validade-codigo{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.credit-type{
+  display: flex;
+  justify-content: space-around;
+}
+
+.number{
+  margin-left: 350px;
+}
+
+.value div{
+    font-size: 20px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom: 50px;
+}
+
+
+
+
+button{
+  width: 1000px;
+  margin-left: 300px;
+
+}
