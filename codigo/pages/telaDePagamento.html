@@ -54,17 +54,13 @@
 
         <section>
             <div class="value">
-                <div class="number">
-                    <label for="numero">Insira o número do cartão</label><br>
-                    <input type="text" name="numero" id="numero" max="16" placeholder="0000000000000000">
-                </div>
                 
                 <div class="validade-codigo">
                     <div class="validade">
                         <label for="validade">Insira a data de validade do cartão</label><br>
-                        <input type="text" class="validade" placeholder="10" >
+                        <input type="text" class="validade" placeholder="10" maxlength="2">
                         <p>/</p>
-                        <input type="text" class="validade" placeholder="2028" >
+                        <input type="text" class="validade" placeholder="2028" maxlength="2" >
                     </div>
                     <div class="codigo">
                         <label for="codigo">Insira o código de segurança</label><br>
@@ -72,16 +68,25 @@
                     </div>
                 </div>
 
-                <div class="credit-type">
-                    <div>
-                        <input type="radio" name="cartao" name="mastercard">
-                        <label for="mastercard"><img src="/codigo/assets/images/Mastercard-Simbolo-380494376.jpg" alt=""></label>
+                <div class="container-2">
+                    <div class="credit-type">
+                            <div>
+                                <input type="radio" name="cartao" name="mastercard">
+                                <label for="mastercard"><img src="/codigo/assets/images/Mastercard-Simbolo-380494376.jpg" alt=""></label>
+                            </div>
+
+                            
+                            <div>
+                                <input type="radio" name="cartao" name="visa">
+                                <label for="visa"><img src="/codigo/assets/images/Visa-Symbol-2009956357.png" alt=""></label>
+                            </div>
                     </div>
-                    <div>
-                        <input type="radio" name="cartao" name="visa">
-                        <label for="visa"><img src="/codigo/assets/images/Visa-Symbol-2009956357.png" alt=""></label>
+                    <div class="number">
+                        <label for="numero">Insira o número do cartão</label><br>
+                        <input type="text" name="numero" id="numero" maxlength="16" placeholder="0000000000000000">
                     </div>
                 </div>
+                
 
                 <button class="confirm">Confirmar pagamento</button>
                    
