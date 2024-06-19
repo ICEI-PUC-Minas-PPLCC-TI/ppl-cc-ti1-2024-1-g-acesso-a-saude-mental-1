@@ -1,0 +1,54 @@
+*{
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+.perfil h5{
+    margin: auto;
+}
+
+.perfName{
+    font-weight: normal;
+}
+
+
+.title{
+    width: max-content;
+    padding: 0 20px;
+    margin: 50px auto;
+    background-color:#D9D9D9;
+    color: #727272;
+    border-radius: 10px;
+    font-weight: normal;
+}
+body{
+    background-color: #DFF1EB;
+}
+
+
+
+.psicobox{
+    background-color: #b6d4cb;
+    margin: 1%;
+    align-content: center;
+}
+#profilepicture{
+    margin: 20px;
+    text-align: center;
+}
+.textblack{
+    color: black;
+    font-size: x-large;
+}
+.info{
+    margin: 1%;
+}
+
+option{ 
+    font-size: 20px;
+}
