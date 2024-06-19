@@ -8,7 +8,7 @@
         }
 
         
-        #nome, #email, #senha, #cpf, #endereco, #complemento, #CFP{
+        #nome, #email, #senha, #cpf, #endereco, #complemento, #cfp{
             background-color: #727272;
             border-radius: 5px;
             outline: none;
