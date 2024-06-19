@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/codigo/assets/css/style.css">
+    <link rel="stylesheet" href="/codigo/assets/css/cadastroDoUsuario.css">
+    <title>Cadastro de Usuário</title>
+    </head>
+    
+    <body>
+        
+        <header class="header"> <!-- Header da pagina com reponsividade menu hamburguer--> 
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Perfil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Consultas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Horários</a>
+                    </li>
+                </ul>
+                
+                <div class="hamburger"> <!-- Menu hamburguer -->
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <a href="#" class="nav-logo">👤 Perfil</a> <!-- Acesso ao perfil -->
+            </nav>
+         
+        </header> 
+
+    <div class="container">
+        <h2>Cadastro de Usuário</h2>
+        <form id="cadastroForm">
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required>
+            </div>
+            <div class="form-group">
+                <label for="CFP">CFP:</label>
+                <input type="text" id="CFP" name="CFP" required>
+            </div>
+            <div class="form-group">
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" name="cpf" required>
+            </div>
+            <div class="form-group">
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" name="endereco" required>
+            </div>
+            <div class="form-group">
+                <label for="complemento">Complemento:</label>
+                <input type="text" id="complemento" name="complemento">
+            </div>
+            <button type="submit" class="btn">Cadastrar</button>
+        </form>
+    </div>
+
+
+    <footer>
+        <p>Copiright© 2024</p>
+    </footer>
+
+    <script src="/codigo/assets/js/menu.js"></script>
+
+</html>
