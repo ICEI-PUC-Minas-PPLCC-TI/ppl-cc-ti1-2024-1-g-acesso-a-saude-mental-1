@@ -39,6 +39,8 @@ function cadastrarUsuario(event) {
         document.getElementById('cpf').value = '';
         document.getElementById('endereco').value = '';
         document.getElementById('complemento').value = '';
+
+        window.location.href = 'home-paciente.html';
     })
     .catch(error => {
         console.error('Erro ao cadastrar usuário:', error);
