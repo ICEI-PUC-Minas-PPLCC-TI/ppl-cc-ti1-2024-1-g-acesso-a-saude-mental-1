@@ -30,22 +30,20 @@ main {
     justify-content: center; /* Centers content horizontally */
     align-items: center; /* Centers content vertically */
     text-align: center; /* Centers text within the element */
-    
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Arial, sans-serif;
+    color: rgb(208, 212, 216);
     height: 300px;
     width: 300px;
     border-radius: 30px;
     
     font-size: 45px;
-    background-color: rgba(153, 157, 161, 0.71);
-    transition: height 5s ease-in-out, width 0.15s ease-in-out, font-size 0.15s ease-in-out, background-color 0.15s ease-in-out;
+    background-color: rgba(116, 119, 122, 0.849);
+    transition: background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 .option-log:hover {
-    height: 350px;
-    width: 350px;
-    font-size: 55px;
-    background-color: rgb(132, 132, 132);
+    background-color: rgb(98, 93, 93);
+    box-shadow: 2px 2px 10px black;
 }
 
 

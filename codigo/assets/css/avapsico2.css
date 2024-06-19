@@ -1,0 +1,62 @@
+section{
+    background-color: #c1c0c0;
+
+    height: 1000px;
+    width: 1250px;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section{
+    margin-top: 10px;
+    border-radius: 20px;
+}
+
+section img{
+    border-radius: 10px;
+}
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    color: #747474;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .titulo-avaliacao{
+    font-size: 50px;
+  }
+
+.Psi-info{
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 30px;
+    gap: 20px;
+    color: rgb(119, 121, 123);
+    padding-bottom: 50px;
+    border-bottom: solid;
+}
+
+.question{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.question-text{
+    font-size: 20px;
+}
+.question div{
+    background-color: #a19f9f;
+    padding: 20px;
+    border-radius: 20px;
+}
