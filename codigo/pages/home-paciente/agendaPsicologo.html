@@ -11,9 +11,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
-  <script defer src="script.js"></script>
-  <link rel="stylesheet" href="../assets/css/style.css">
-  <link rel="stylesheet" href="../assets/css/agendaPaciente.css">
+  <link rel="stylesheet" href="/codigo/assets/css/style.css">
+  <link rel="stylesheet" href="/codigo/assets/css/agendaPsicologo.css">
 </head>
 
 
@@ -58,35 +57,38 @@
       <table>
         <thead>
           <div class="days">
-            <p>Sun</p>
-            <p>Mon</p>
-            <p>Tue</p>
-            <p>Wed</p>
-            <p>Thu</p>
-            <p>Fri</p>
-            <p>Sat</p>
+            <p>Dom</p>
+            <p>Seg</p>
+            <p>Ter</p>
+            <p>Qua</p>
+            <p>Qui</p>
+            <p>Sex</p>
+            <p>Sab</p>
           </div>
         </thead>
         <tbody id="calendarBody">
         </tbody>
       </table>
     </div>
-    <p class="horariosDisponiveis">HORARIOS DISPONIVEIS</p>
     <div class="form-container" id="formContainer">
+      <form id="eventForm">
+        <h2>Adicionar Horário</h2>
+        <input type="time" id="eventTitle" name="eventTitle" required>
+        <button type="submit">Adicionar</button>
+      </form>
       <div id="horarios">
-        <p>
-          <button>l</button>
-        </p>
+
       </div>
     </div>
+
   </main>
   
 
   <footer>
     <p>Copiright© 2024</p>
 </footer> 
-<script src="../assets/js/agendaPaciente.js"></script>
-  <script src="../assets/js/menu.js"></script>
+<script src="/codigo/assets/js/agendaPsicologo.js"></script>
+  <script src="/codigo/assets/js/menu.js"></script>
 
 </body>
 
