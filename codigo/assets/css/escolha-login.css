@@ -59,3 +59,11 @@ main {
 .option-end a:visited{
     color: green;
 }
+
+.option-log a{
+    color: rgb(208, 212, 216);
+}
+
+.option-log a:visited{
+    color: rgb(208, 212, 216);
+}

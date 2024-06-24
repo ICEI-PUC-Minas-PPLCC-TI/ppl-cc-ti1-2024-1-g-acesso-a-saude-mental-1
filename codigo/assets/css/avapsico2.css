@@ -1,7 +1,7 @@
 section{
     background-color: #c1c0c0;
 
-    height: 1000px;
+    height: 1200px;
     width: 1250px;
 }
 main{
@@ -56,7 +56,14 @@ section img{
     font-size: 20px;
 }
 .question div{
+    height: 150px;
+    width: 500px;
     background-color: #a19f9f;
     padding: 20px;
     border-radius: 20px;
+}
+
+.avaliation-title{
+    font-size: 40px;
+    margin: 20px;
 }
