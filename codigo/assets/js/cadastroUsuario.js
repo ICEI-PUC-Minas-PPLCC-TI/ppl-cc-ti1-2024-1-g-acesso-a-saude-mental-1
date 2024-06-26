@@ -40,7 +40,7 @@ function cadastrarUsuario(event) {
         document.getElementById('endereco').value = '';
         document.getElementById('complemento').value = '';
 
-        window.location.href = 'home-paciente.html';
+        window.location.href = '/codigo/pages/home-paciente/home-paciente.html';
     })
     .catch(error => {
         console.error('Erro ao cadastrar usuário:', error);
@@ -70,9 +70,9 @@ function loginUsuario(event) {
     .then(response => response.json())
     .then(data => {
         console.log('Resposta do servidor:', data);
-        alert('Login realizado com sucesso!');
+        //alert('Login realizado com sucesso!');
         // Aqui você pode redirecionar o usuário para a página de perfil ou outra página desejada
-        window.location.href = 'home-paciente.html';
+        window.location.href = '/codigo/pages/home-paciente/home-paciente.html';
     })
     .catch(error => {
         console.error('Erro ao fazer login:', error);
