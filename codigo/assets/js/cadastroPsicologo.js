@@ -30,7 +30,12 @@ function cadastrarUsuario(event) {
         },
         body: JSON.stringify(usuario),
     })
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Erro na requisição: ' + response.statusText);
+        }
+        return response.json();
+    })
     .then(data => {
         console.log('Resposta do servidor:', data);
         alert('Cadastro realizado com sucesso!');
