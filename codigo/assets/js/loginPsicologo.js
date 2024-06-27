@@ -8,7 +8,7 @@ function loginUsuario(event) {
     var cfp = document.getElementById('cfp').value;
 
     // Faz a requisição GET para o servidor JSON para obter todos os usuários
-    fetch('https://778b3d17-899f-478a-bc1a-fb48f02dff8b-00-10mayq3qxg10t.kirk.replit.dev/login')
+    fetch('https://778b3d17-899f-478a-bc1a-fb48f02dff8b-00-10mayq3qxg10t.kirk.replit.dev/loginpsicologo')
         .then(response => response.json())
         .then(data => {
             // Verifica se o usuário existe com os dados fornecidos

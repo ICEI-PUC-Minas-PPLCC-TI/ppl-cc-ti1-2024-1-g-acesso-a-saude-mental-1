@@ -1,4 +1,4 @@
-// Função para ser chamada quando o formulário de cadastro for submetido
+    // Função para ser chamada quando o formulário de cadastro for submetido
 function cadastrarUsuario(event) {
     event.preventDefault(); // Evita o comportamento padrão de enviar o formulário
 
