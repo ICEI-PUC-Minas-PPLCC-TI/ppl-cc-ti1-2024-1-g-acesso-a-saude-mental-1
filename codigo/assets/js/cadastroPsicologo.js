@@ -23,7 +23,7 @@ function cadastrarUsuario(event) {
     };
 
     // Faz a requisição POST para o servidor JSON
-    fetch('https://778b3d17-899f-478a-bc1a-fb48f02dff8b-00-10mayq3qxg10t.kirk.replit.dev/loginpsicologo', {
+    fetch('http://localhost:3000/loginpsicologo', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -48,7 +48,7 @@ function cadastrarUsuario(event) {
         document.getElementById('endereco').value = '';
         document.getElementById('complemento').value = '';
 
-        window.location.href = '/codigo/pages/home-psicologo/home-psicologo.html';
+        window.location.href = '/codigo/pages/home-psicologo/loginPsicologo.html';
     })
     .catch(error => {
         console.error('Erro ao cadastrar usuário:', error);
@@ -65,7 +65,7 @@ function loginUsuario(event) {
     var senhaLogin = document.getElementById('senhaLogin').value;
 
     // Faz a requisição POST para o servidor JSON
-    fetch('https://778b3d17-899f-478a-bc1a-fb48f02dff8b-00-10mayq3qxg10t.kirk.replit.dev/loginpsicologo', {
+    fetch('http://localhost:3000/loginpsicologo', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

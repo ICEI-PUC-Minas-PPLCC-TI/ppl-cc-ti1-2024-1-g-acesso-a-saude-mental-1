@@ -4,10 +4,12 @@ let currentYear = today.getFullYear();
 let day;
 let mes;
 let appointments;
+let usuarioLogado; // Variável para armazenar o usuário logado
 
+// Função para carregar os compromissos do servidor
 async function loadAppointments() {
     try {
-        const response = await fetch("https://778b3d17-899f-478a-bc1a-fb48f02dff8b-00-10mayq3qxg10t.kirk.replit.dev/horarios");
+        const response = await fetch("http://localhost:3000/horarios");
         const data = await response.json();
         appointments = data;
         generateCalendar(currentMonth, currentYear); // Atualiza o calendário após carregar os compromissos
@@ -16,8 +18,17 @@ async function loadAppointments() {
     }
 }
 
-const horarios = document.getElementById("horarios");
+// Função para identificar o usuário logado
+function identifyLoggedUser() {
+    // Simule o usuário logado (pode ser obtido de uma sessão ou token)
+    usuarioLogado = {
+        id: '0bcb', // ID do psicólogo logado (exemplo)
+        nome: 'felipe',
+        cfp: '123456789' // CFP do psicólogo logado (exemplo)
+    };
+}
 
+// Função para gerar o calendário
 function generateCalendar(month, year) {
     mes = month;
     const monthYearElement = document.getElementById('monthYear');
@@ -80,25 +91,6 @@ function generateCalendar(month, year) {
                         horarios.appendChild(appointmentElement);
                     });
                     day = +button.textContent;
-
-                    // Adiciona o evento de exclusão para cada botão de lixo
-                    horarios.querySelectorAll(".deletar").forEach(deleteButton => {
-                        deleteButton.addEventListener("click", function () {
-                            const id = this.getAttribute("data-id");
-                            fetch(`https://778b3d17-899f-478a-bc1a-fb48f02dff8b-00-10mayq3qxg10t.kirk.replit.dev/horarios/${id}`, {
-                                method: 'DELETE'
-                            })
-                                .then(response => {
-                                    if (!response.ok) {
-                                        throw new Error('Erro ao excluir dados');
-                                    }
-                                    this.parentNode.remove();
-                                })
-                                .catch(error => {
-                                    console.error('Erro:', error);
-                                });
-                        });
-                    });
                 });
                 if (date === today.getDate() && month === today.getMonth() && year === today.getFullYear()) {
                     button.classList.add('today');
@@ -116,6 +108,7 @@ function generateCalendar(month, year) {
     }
 }
 
+// Função para avançar para o próximo mês
 function nextMonth() {
     const formContainer = document.getElementById('formContainer');
     formContainer.style.display = 'none';
@@ -124,6 +117,7 @@ function nextMonth() {
     generateCalendar(currentMonth, currentYear);
 }
 
+// Função para voltar para o mês anterior
 function prevMonth() {
     const formContainer = document.getElementById('formContainer');
     formContainer.style.display = 'none';
@@ -132,15 +126,18 @@ function prevMonth() {
     generateCalendar(currentMonth, currentYear);
 }
 
+// Adicionar event listeners para os botões de próxima e anterior mês
 document.getElementById('nextMonth').addEventListener('click', nextMonth);
 document.getElementById('prevMonth').addEventListener('click', prevMonth);
 
+// Event listener para adicionar novo compromisso
 document.getElementById('eventForm').addEventListener('submit', function (event) {
     event.preventDefault();
     const eventData = {
         hora: document.getElementById('eventTitle').value,
         data: +day,
-        mes: mes + 1
+        mes: mes + 1,
+        psicologo_cfp: usuarioLogado.cfp // Incluir o CFP do psicólogo logado
     };
 
     const requestOptions = {
@@ -152,7 +149,7 @@ document.getElementById('eventForm').addEventListener('submit', function (event)
     };
 
     // Enviando a requisição para o servidor
-    fetch('https://778b3d17-899f-478a-bc1a-fb48f02dff8b-00-10mayq3qxg10t.kirk.replit.dev/horarios', requestOptions)
+    fetch('http://localhost:3000/horarios', requestOptions)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Erro ao enviar dados para o servidor');
@@ -160,7 +157,7 @@ document.getElementById('eventForm').addEventListener('submit', function (event)
             return response.json();
         })
         .then(data => {
-            // Adiciona novo compromisso ao calendário
+            // Adicionar novo compromisso ao calendário
             const appointmentElement = document.createElement("p");
             appointmentElement.innerHTML = `
                 <i data-id="${data.id}" class="ph ph-trash deletar"></i>
@@ -168,10 +165,10 @@ document.getElementById('eventForm').addEventListener('submit', function (event)
             `;
             horarios.appendChild(appointmentElement);
 
-            // Adiciona o evento de exclusão para o novo item
+            // Adicionar evento de exclusão para o novo item
             appointmentElement.querySelector(".deletar").addEventListener("click", function () {
                 const id = this.getAttribute("data-id");
-                fetch(`https://778b3d17-899f-478a-bc1a-fb48f02dff8b-00-10mayq3qxg10t.kirk.replit.dev/horarios/${id}`, {
+                fetch(`http://localhost:3000/horarios/${id}`, {
                     method: 'DELETE'
                 })
                     .then(response => {
@@ -190,6 +187,27 @@ document.getElementById('eventForm').addEventListener('submit', function (event)
         });
 });
 
+// Event listener para deletar compromissos existentes
+horarios.addEventListener('click', function (event) {
+    if (event.target.classList.contains('deletar')) {
+        const id = event.target.getAttribute('data-id');
+        fetch(`http://localhost:3000/horarios/${id}`, {
+            method: 'DELETE'
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Erro ao excluir dados');
+                }
+                event.target.parentNode.remove();
+            })
+            .catch(error => {
+                console.error('Erro:', error);
+            });
+    }
+});
+
+// Carregar compromissos ao carregar a página
 document.addEventListener('DOMContentLoaded', () => {
-    loadAppointments();
+    identifyLoggedUser(); // Identificar o usuário logado
+    loadAppointments(); // Carregar compromissos
 });
