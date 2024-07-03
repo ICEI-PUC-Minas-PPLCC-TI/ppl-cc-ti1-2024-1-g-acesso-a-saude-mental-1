@@ -18,15 +18,6 @@ async function loadAppointments() {
     }
 }
 
-// Função para identificar o usuário logado
-function identifyLoggedUser() {
-    // Simule o usuário logado (pode ser obtido de uma sessão ou token)
-    usuarioLogado = {
-        id: '0bcb', // ID do psicólogo logado (exemplo)
-        nome: 'felipe',
-        cfp: '123456789' // CFP do psicólogo logado (exemplo)
-    };
-}
 
 // Função para gerar o calendário
 function generateCalendar(month, year) {
