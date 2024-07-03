@@ -64,5 +64,27 @@
       "endereco": "123123123",
       "complemento": "2312312"
     }
+  ],
+  "usuariologado": [
+    {
+      "id": "0bcb",
+      "nome": "felipe",
+      "email": "felipe@gmail.com",
+      "senha": "1234",
+      "cfp": "123456789",
+      "cpf": "12345",
+      "endereco": "123",
+      "complemento": "123"
+    },
+    {
+      "id": "0bcb",
+      "nome": "felipe",
+      "email": "felipe@gmail.com",
+      "senha": "1234",
+      "cfp": "123456789",
+      "cpf": "12345",
+      "endereco": "123",
+      "complemento": "123"
+    }
   ]
 }
