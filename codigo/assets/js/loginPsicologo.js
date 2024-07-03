@@ -15,6 +15,9 @@ function loginUsuario(event) {
             if (usuario) {
                 alert('Login realizado com sucesso!');
                 
+                // Adiciona a nova informação "dlogado": "1010"
+                usuario.idlogado = "1010";  // Atualiza o objeto usuário com a nova informação
+
                 // Envia os dados para o servidor JSON para a classe usuariologado
                 fetch('http://localhost:3000/usuariologado', {
                     method: 'POST',
