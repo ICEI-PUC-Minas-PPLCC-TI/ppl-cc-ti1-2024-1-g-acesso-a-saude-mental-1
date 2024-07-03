@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <h2 id="psicologotext1">${psicologo.nome}</h2>
                             <p id="psicologotext2">${psicologo.especialidade}</p>
                             <p id="psicologotext2">${psicologo.descricao}</p>
+                            <p id="psicologotext3">Nota: ${psicologo.nota}</p>
                             <p id="psicologotext2"><a href="agendaPaciente.html">Marcar consulta</a></p>
                         </div>
                     </div>

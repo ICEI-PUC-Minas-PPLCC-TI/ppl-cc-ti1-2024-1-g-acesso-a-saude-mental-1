@@ -65,3 +65,13 @@ h1 {
     width: auto;
     height: auto;
 }
+#psicologotext1{
+    font-size: x-large;
+}
+#psicologotext2{
+    font-size: large;
+}
+#psicologotext3{
+    font-size: large;
+    color: #4FA088;
+}
