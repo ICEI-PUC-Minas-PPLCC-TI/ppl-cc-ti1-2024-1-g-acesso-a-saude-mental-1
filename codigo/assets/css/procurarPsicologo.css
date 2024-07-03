@@ -4,7 +4,7 @@
 }
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #DFF1EB;
     margin: 0;
     padding: 0;
 }
@@ -58,4 +58,10 @@ h1 {
 .card-content p {
     margin: 0;
     color: #777;
+}
+#imagempsico{
+    max-width:381px;
+    max-height:300px;
+    width: auto;
+    height: auto;
 }

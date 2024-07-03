@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
             psicologos.forEach(psicologo => {
                 const cardHTML = `
                     <div class="card">
-                        <img src="${psicologo.imagem}" alt="">
+                        <img src="${psicologo.imagem}" id="imagempsico"alt="">
                         <div class="card-content">
                             <h2 id="psicologotext1">${psicologo.nome}</h2>
                             <p id="psicologotext2">${psicologo.especialidade}</p>

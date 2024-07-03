@@ -3,36 +3,36 @@
         "nome": "Dra. Ana Silva",
         "especialidade": "Psicologia Clínica",
         "descricao": "Sou especialista em terapia cognitivo-comportamental.",
-        "imagem": "ana_silva.jpg"
+        "imagem": "/codigo/assets/images/pessoa 6.jpg"
     },
     {
         "nome": "Dr. Carlos Oliveira",
         "especialidade": "Psicologia Infantil",
         "descricao": "Meu foco em desenvolvimento infantil e adolescência.",
-        "imagem": "carlos_oliveira.jpg"
+        "imagem": "/codigo/assets/images/pessoa1.jpg"
     },
     {
         "nome": "Dra. Maria Fernanda",
         "especialidade": "Psicologia Organizacional",
         "descricao": "Tenho experiência em coaching e desenvolvimento profissional.",
-        "imagem": "maria_fernanda.jpg"
+        "imagem": "/codigo/assets/images/pessoa4.webp"
     },
     {
         "nome": "Dr. João Pereira",
         "especialidade": "Psicologia Esportiva",
         "descricao": "Trabalho com atletas para melhorar o desempenho mental.",
-        "imagem": "joao_pereira.jpg"
+        "imagem": "/codigo/assets/images/pessoa2.jpeg"
     },
     {
         "nome": "Dra. Juliana Souza",
         "especialidade": "Psicologia Social",
         "descricao": "Estudo como as interações sociais afetam o comportamento.",
-        "imagem": "juliana_souza.jpg"
+        "imagem": "/codigo/assets/images/pessoa5.jpg"
     },
     {
         "nome": "Dr. Pedro Almeida",
         "especialidade": "Neuropsicologia",
         "descricao": "Sou especialista em avaliações neuropsicológicas.",
-        "imagem": "pedro_almeida.jpg"
+        "imagem": "/codigo/assets/images/pessoa3.jpg"
     }
 ]
