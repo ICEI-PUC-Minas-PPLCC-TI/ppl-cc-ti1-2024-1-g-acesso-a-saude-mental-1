@@ -1,38 +1,28 @@
-document.getElementById('loginForm').addEventListener('submit', function(event) {
-    event.preventDefault();
+function loginUsuario(event) {
+    event.preventDefault(); // Evita o comportamento padrão de enviar o formulário
 
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-    const message = document.getElementById('message');
+    // Captura os valores dos campos do formulário de login
+    var email = document.getElementById('email').value;
+    var senha = document.getElementById('password').value;
+    var cfp = document.getElementById('cpf').value;
 
-    if (email === '' || password === '') {
-        message.textContent = 'Preencha os campos de email e senha.';
-        return;
-    }
-
-    fetch('http://127.0.0.1:5500/HTML/Login/login.json')
+    // Faz a requisição GET para o servidor JSON para obter todos os usuários
+    fetch('http://localhost:3000/login')
         .then(response => response.json())
         .then(data => {
-            const users = data.users;
-            const user = users.find(user => user.email === email && user.password === password);
-
-            if (user) {
-                message.textContent = 'Logado com sucesso!';
-                message.style.color = 'green';
-                setTimeout(() => {
-                    if (user.accountType === 1) {
-                        window.location.href = 'logged1.html';
-                    } else if (user.accountType === 2) {
-                        window.location.href = 'logged2.html';
-                    }
-                }, 1000);
-            } else {
-                message.textContent = 'Email ou senha inválidos.';
-                message.style.color = 'red';
-            }
+            // Verifica se o usuário existe com os dados fornecidos
+            var usuario = data.find(user => user.email === email && user.senha === senha && user.cfp === cfp);
         })
         .catch(error => {
-            message.textContent = 'Um erro ocorreu, por favor tente novamente mais tarde.';
-            console.error('Error fetching the JSON file:', error);
+            console.error('Erro ao buscar usuários:', error);
+            alert('Erro ao fazer login. Por favor, tente novamente.');
         });
-});
+
+    // Limpa os campos do formulário de login após tentativa de login
+    document.getElementById('email').value = '';
+    document.getElementById('password').value = '';
+    document.getElementById('cpf').value = '';
+}
+
+// Adiciona o event listener para o botão de login
+document.getElementById('loginForm').addEventListener('submit', loginUsuario);

@@ -7,6 +7,11 @@
     border-radius: 10px ;
     display: flex;
     flex-direction: column;
+    text-align: center;
+    padding: 30px;
+    margin-bottom: 390px;
+    margin-top: 300px;
+    text-decoration: none;
 }
 
 #foto{
@@ -19,4 +24,5 @@
     margin-top: 50px;
     margin-left: 50px;
 }
+
 
