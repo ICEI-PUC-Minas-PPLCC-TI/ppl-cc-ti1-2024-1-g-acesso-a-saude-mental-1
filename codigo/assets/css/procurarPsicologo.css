@@ -11,8 +11,8 @@ body {
 
 .container {
     width: 80%;
-    margin-left: 412px;
-    margin-right: 412px;
+    
+    margin: 0px auto;
     margin-top: 50px;
     padding: 20px;
     background-color: white;
