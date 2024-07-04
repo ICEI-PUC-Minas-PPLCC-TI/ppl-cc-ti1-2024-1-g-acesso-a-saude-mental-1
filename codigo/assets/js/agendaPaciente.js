@@ -6,7 +6,7 @@ let mes;
 let appointments;
 
 async function loadAppointments() {
-    const response = await fetch("https://778b3d17-899f-478a-bc1a-fb48f02dff8b-00-10mayq3qxg10t.kirk.replit.dev/horarios");
+    const response = await fetch("http://localhost:3000/horarios");
     const data = await response.json();
     appointments = data;
 }
@@ -69,7 +69,7 @@ function generateCalendar(month, year) {
                     hours.forEach(appointment => {
                         horarios.innerHTML += `
                             <p>
-                                ${appointment.hora}
+                                <a href="/codigo/pages/home-paciente/telaDePagamento.html">${appointment.hora}</a>
                             </p>
                         `;
                     });

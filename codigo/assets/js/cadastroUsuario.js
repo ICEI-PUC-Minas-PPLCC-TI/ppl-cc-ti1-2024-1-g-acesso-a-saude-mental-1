@@ -21,7 +21,7 @@ function cadastrarUsuario(event) {
     };
 
     // Faz a requisição POST para o servidor JSON
-    fetch('https://778b3d17-899f-478a-bc1a-fb48f02dff8b-00-10mayq3qxg10t.kirk.replit.dev/login', {
+    fetch('http://localhost:3000/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -57,7 +57,7 @@ function loginUsuario(event) {
     var senhaLogin = document.getElementById('senhaLogin').value;
 
     // Faz a requisição POST para o servidor JSON
-    fetch('https://778b3d17-899f-478a-bc1a-fb48f02dff8b-00-10mayq3qxg10t.kirk.replit.dev/login', {
+    fetch('http://localhost:3000/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

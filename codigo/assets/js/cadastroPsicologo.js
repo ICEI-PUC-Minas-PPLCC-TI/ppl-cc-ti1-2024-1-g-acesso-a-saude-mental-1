@@ -80,7 +80,7 @@ function loginUsuario(event) {
         console.log('Resposta do servidor:', data);
         // alert('Login realizado com sucesso!');
         // Aqui você pode redirecionar o usuário para a página de perfil ou outra página desejada
-        window.location.href = '/codigo/pages/home-psicologo/home-psicologo.html';
+        window.location.href = '/codigo/pages/home-psicologo/loginPsicologo.html';
     })
     .catch(error => {
         console.error('Erro ao fazer login:', error);
